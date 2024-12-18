@@ -1,0 +1,136 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#list1 .form-control {
+    border-color: transparent;
+}
+
+    #list1 .form-control:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+#list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #fbfbfb;
+}
+
+/**Layout*/
+
+.sign-upBtn {
+    background: #fccb90;
+    background: linear-gradient(to right, #4facfe,#00f2fe);
+}
+
+/*LOGIN START*/
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #4facfe,#00f2fe);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4facfe,#00f2fe);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+/*LOGIN FINISH*/
+
+/*TaskTables*/
+
+.modal-content{
+    border:none !important;
+    
+}
+
+.modal-header {
+    background-color:#007bff;
+
+}
+
+.modal-dialog{
+    max-width:600px !important;
+    padding:0%;
+}
+
+.modal-title{
+    color:white;    
+    font-size:25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.tab-content{
+    border:none !important  ;    
+}
+
+.close{
+    background-color:transparent;
+    border:none;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.form-control {
+    font-weight:500;
+    font-size:.875rem;
+    
+
+}
+
+.input-radius{
+    border-radius:20px !important
+}
+
+input[type=date]{
+    height:40px !important
+}
+/*TaskTables FINISH*/
+
+
+
+/*GetMember START*/
+
+#table-header {
+    background-color: #007bff;
+    color:white
+}
+
+/*GetMember FINISH*/
+
+
+/*MY TASKS START*/
+
+.myTasksInput{
+    border-width:0 0 1px 0 !important;
+    
+}
+
+/*MY TASKS FINISH*/

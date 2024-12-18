@@ -1,0 +1,18 @@
+﻿@model TelegramBot.Entities.UserDB
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div>
+    <form asp-action="updateUser" asp-controller="Admin">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <div class="mb-3">
+            <label asp-for=userName class="form-label">Kullanıcı Adı</label>
+            <input asp-for=userName type="text" class="form-control" name="UserName" value="@Model.userName" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">E-Posta</label>
+            <input type="email" class="form-control" name="Email" value="@Model.userSurname" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>

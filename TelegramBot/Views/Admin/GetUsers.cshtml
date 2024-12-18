@@ -1,0 +1,215 @@
+﻿@model List<UserVM>
+@{
+
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    int i = 1;
+
+
+
+}
+
+<div class="container">
+    <div id="table-header" class="col-12 p-3 rounded-top">
+        <span>
+            Site Kullanıcıları
+        </span>
+        <button type="button" class="createUserBtn" style="border:none;background-color:transparent"><i class="fa-solid fa-circle-plus fa-lg ms-1" style="color: white;"></i></button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>*</th>
+
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Rol</th>
+                <th>Kayıt Tarihi</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+
+                    <th scope="row">@i</th>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    <td>@item.Email</td>
+                    <td>@item.phone</td>
+                    <td>@item.role</td>
+                    <td>@item.RegisterDate</td>
+
+                    <td>                    
+                        <button class="btn btn-success btn-sm editUserBtn" type="button"  data-userid="@item.Id">Düzenle</button>
+                        <button class="btn btn-danger btn-sm deleteUserBtn" data-userid="@item.Id" data-name="@item.Name" data-surname="@item.Surname" onclick="return confirm('Bu kullanıcıyı silmek istediğinize emin misiniz @item.Name @item.Surname? ')">Sil</button>
+                    </td>
+
+                </tr>
+
+                i++;
+            }
+
+
+        </tbody>
+    </table>
+
+</div>
+
+<!-- Modal New User -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">Yeni Üye Ekle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="createUserForm">
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Ad</label>
+                        <input type="text" class="form-control" id="Name" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Surname" class="form-label">Soyad</label>
+                        <input type="text" class="form-control" id="Surname" name="Surname" required>
+                    </div>
+                   
+                   
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefon</label>
+                        <input id="phone" name="phone" type="text" class="form-control"
+                               placeholder="000 000 0000" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" />
+                        
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Kullanıcı Rolü</label>
+                        <select class="form-select" id="role" name="role" aria-label="kullanıcı rolü">
+                           
+                            
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Kullanıcı Şifre</label>
+                        <input id="password" name="password" type="password" class="form-control" placeholder="*******" />
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label">Kullanıcı Şifre Tekrar</label>
+                        <input id="repassword" name="repassword" type="password" class="form-control" placeholder="*******" />
+
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Düzenleme Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">Üye Bilgilerini Düzenle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <input type="hidden" id="editUserId" name="Id" />
+                    <div class="mb-3">
+                        <label for="editName" class="form-label">Ad</label>
+                        <input type="text" class="form-control" id="editName" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editSurname" class="form-label">Soyad</label>
+                        <input type="text" class="form-control" id="editSurname" name="Surname" required>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="editPhone" class="form-label">Telefon</label>
+                        <input id="editPhone" name="phone" type="text" class="form-control"
+                               placeholder="000 000 0000" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" />
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editRole" class="form-label">Kullanıcı Rolü</label>
+                        <select class="form-select" id="editRole" name="role" aria-label="kullanıcı rolü">
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editEmail" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="editEmail" name="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--User-Member karşılaştır-->
+
+<div class="modal fade" id="confirmUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  " role="document">
+        <div class="modal-content col-6">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Çalışan Hesabı Ekle</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-regular fa-circle-xmark fa-xl" style="color: white;"></i>
+                </button>
+            </div>
+
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link " id="project-add-users-tab" data-bs-toggle="tab" href="#project-users-members" role="tab" aria-controls="project-users-members" aria-selected="true">Çalışanlar</a>
+                </li>
+            </ul>
+
+            <form id="confirmUserForm">
+                <div class="modal-body">
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="project-add-users" role="tabpanel">
+                            <div class="form-users">
+                                <div id="userList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" id="setUserIdButton" class="btn btn-primary">Şirkete Kaydet</button>
+                </div>
+
+            </form>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ACD Staj\\staj proje\\TelegramBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\controllers\\api\\telegramapicontrollerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\controllers\\api\\telegramapicontrollerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\views\\admin\\getmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\views\\admin\\getmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\views\\shared\\_dynamictable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\views\\shared\\_dynamictable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\entities\\roledb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\entities\\roledb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|d:\\acd staj\\staj proje\\telegrambot\\telegrambot\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A81F763-4591-4DE0-B03C-07DC8A1F0289}|TelegramBot\\TelegramBot.csproj|solutionrelative:telegrambot\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 326,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "TelegramBot\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "TelegramBot\\Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T11:32:46.991Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TelegramBot\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TelegramBot\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T10:58:18.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TelegramBot\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TelegramBot\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAgBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T10:50:32.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TelegramApiControllerResponse.cs",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\API\\TelegramApiControllerResponse.cs",
+              "RelativeDocumentMoniker": "TelegramBot\\Controllers\\API\\TelegramApiControllerResponse.cs",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\API\\TelegramApiControllerResponse.cs",
+              "RelativeToolTip": "TelegramBot\\Controllers\\API\\TelegramApiControllerResponse.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T10:47:01.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "TelegramBot\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "TelegramBot\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAuwGYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T12:16:35.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "roleDB.cs",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Entities\\roleDB.cs",
+              "RelativeDocumentMoniker": "TelegramBot\\Entities\\roleDB.cs",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Entities\\roleDB.cs",
+              "RelativeToolTip": "TelegramBot\\Entities\\roleDB.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T11:04:40.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_DynamicTable.cshtml",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Shared\\_DynamicTable.cshtml",
+              "RelativeDocumentMoniker": "TelegramBot\\Views\\Shared\\_DynamicTable.cshtml",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Shared\\_DynamicTable.cshtml",
+              "RelativeToolTip": "TelegramBot\\Views\\Shared\\_DynamicTable.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAABoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T10:20:10.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetMembers.cshtml",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Admin\\GetMembers.cshtml",
+              "RelativeDocumentMoniker": "TelegramBot\\Views\\Admin\\GetMembers.cshtml",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Admin\\GetMembers.cshtml",
+              "RelativeToolTip": "TelegramBot\\Views\\Admin\\GetMembers.cshtml",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAowMEAAADPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-17T19:23:10.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TelegramBot\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TelegramBot\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwEYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-17T09:49:05.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TelegramBot\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\ACD Staj\\staj proje\\TelegramBot\\TelegramBot\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TelegramBot\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAKADAAAAAAAAAAAAAMIDAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-11T08:01:41.214Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

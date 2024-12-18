@@ -1,0 +1,113 @@
+﻿@model IEnumerable<dynamic>
+@{
+    int i = 1;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            @foreach (var prop in Model.First().GetType().GetProperties())
+            {
+                <th>@prop.Name</th> <!-- Property adı başlık olarak alınır -->
+            }
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@i</th>
+                @foreach (var property in item.GetType().GetProperties())
+                {
+                    <td>@property.GetValue(item)</td>
+                }
+                <td>
+                    <!-- Edit Butonu -->
+                    <button class="btn btn-primary btn-sm edit-button"
+                            data-id="@item.Id"
+                            data-type="@item.GetType().Name">
+                        Düzenle
+                    </button>
+
+                    <!-- Silme Butonu -->
+                    <button class="btn btn-danger btn-sm delete-button"
+                            data-id="@item.Id"
+                            data-type="@item.GetType().Name">
+                        Sil
+                    </button>
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+
+<!-- Modal Yapısı -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Düzenle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- Modal içeriği burada yüklenecek -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.edit-button').on('click', function () {
+            var id = $(this).data('id');
+            var type = $(this).data('type');
+            // AJAX ile veri yükleme
+            $.ajax({
+                url: '/Admin/GetEditForm', // Controller ve Action yönlendirmesi
+                method: 'GET',
+                data: { id: id, type: type },
+                success: function (response) {
+                    // Modal içeriğini güncelle
+                    $('#modalContent').html(response);
+                    // Modal'ı aç
+                    $('#editModal').modal('show');
+                },
+                error: function (error) {
+                    console.log('Hata:', error);
+                }
+            });
+        });
+
+        $('.delete-button').on('click', function () {
+            var id = $(this).data('id');
+            var type = $(this).data('type');
+            var confirmation = confirm('Bu kaydı silmek istediğinizden emin misiniz?');
+
+            if (confirmation) {
+                // Silme işlemi için AJAX çağrısı yap
+                $.ajax({
+                    url: (type === 'User' ? '/Admin/DeleteUser' : '/Admin/DeleteMember'), // Controller ve Action yönlendirmesi
+                    method: 'POST',
+                    data: { id: id },
+                    success: function (response) {
+                        // Başarılı olduğunda pop-up göster
+                        alert('Kayıt başarıyla silindi.');
+                        location.reload(); // Sayfayı yenile
+                    },
+                    error: function (error) {
+                        console.log('Hata:', error);
+                        alert('Silme işlemi sırasında bir hata oluştu.');
+                    }
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,39 @@
+﻿@model Members
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div>
+    <form asp-action="updateMember" asp-controller="Admin">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <div class="mb-3">
+            <label asp-for=Name class="form-label">Adı</label>
+            <input asp-for=Name type="text" class="form-control" name="FirstName" value="@Model.Name" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for=Surname class="form-label">Soyad</label>
+            <input asp-for=Surname type="text" class="form-control" name="LastName" value="@Model.Surname" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for=telegramId class="form-label">Telegram Id</label>
+            <input asp-for=telegramId type="text" class="form-control" name="telegramId" value="@Model.telegramId" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=phone class="form-label">Telefon No</label>
+            <input asp-for=phone type="text" class="form-control" name="phone" value="@Model.phone" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=email class="form-label">Email</label>
+            <input asp-for=email type="text" class="form-control" name="email" value="@Model.email" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for=startingJob class="form-label">İşe Başlama</label>
+            <input asp-for=startingJob type="text" class="form-control" name="startingJob" value="@Model.startingJob" required />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>

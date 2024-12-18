@@ -1,0 +1,221 @@
+﻿@model List<Members>
+
+@{
+
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    int i = 1;
+
+    
+
+}
+
+<div class="container">
+    <div id="table-header" class="col-12 p-3 rounded-top">
+        <span>
+            Şirket Çalışanları          
+        </span>
+        <button type="button" id="createMemberBtn" style="border:none;background-color:transparent"><i class="fa-solid fa-circle-plus fa-lg ms-1" style="color: white;"></i></button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>*</th>
+
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Kategori</th>
+                <th>Telegram Id</th>
+                <th>İşe Başlama</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <th scope="row">@i</th>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    <td>@item.email</td>
+                    <td>@item.phone</td>
+                    <td>@item.category</td>
+                    <td>@item.telegramId</td>
+                    <td>@item.startingJob</td>
+
+
+                    <td>
+                        <button class="btn btn-secondary btn-sm connectUser" data-email="@item.email" data-memberid="@item.Id" >Hesap bağla</button>
+                        <button class="btn btn-success btn-sm open-model" type="button" data-bs-toggle="modal" data-bs-target="#editMemberModal" route-id="@item.Id">Düzenle</button>
+                        <button class="btn btn-danger btn-sm" asp-action="deleteMember" asp-controller="Admin" asp-route-Id="@item.Id" onclick="return confirm('Bu çalışanı silmek istediğinize emin misiniz @item.Name @item.Surname? ')">Sil</button>
+                    </td>
+
+
+                </tr>
+
+                i++;
+            }
+
+
+        </tbody>
+    </table>
+
+</div>
+
+<!-- Modal New Member -->
+<div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="memberModalLabel">Yeni Üye Ekle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="createMemberForm">
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Ad</label>
+                        <input type="text" class="form-control" id="Name" name="Name" required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="Surname" class="form-label">Soyad</label>
+                        <input type="text" class="form-control" id="Surname" name="Surname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="startingJob" class="form-label">İşe Başlama Tarihi</label>
+                        <input type="date" class="form-control" id="startingJob" name="startingJob" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telegramId" class="form-label">Telegram ID</label>
+                        <input type="text" class="form-control" id="telegramId" name="telegramId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefon</label>
+                        <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Çalışan Kategorisi</label>
+                        <select class="form-select" id="category" name="category" aria-label="çalışan kategorisi">
+                            <option selected>Çalışan kategorisini seçiniz</option>
+                            <option value="Yönetici">Yöneticiler</option>
+                            <option value="Stajyer">Stajyerler</option>
+                            <option value="Takım Lideri">Takım Liderleri</option>
+                            <option value="Yazılım Ekibi">Yazılım Ekibi</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Düzenleme Modal -->
+<div class="modal fade" id="editMemberModal" tabindex="-1" aria-labelledby="editMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editMemberModalLabel">Üye Bilgilerini Düzenle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editMemberForm">
+                    <input type="hidden" id="editMemberId" name="Id" />
+                    <div class="mb-3">
+                        <label for="editName" class="form-label">Ad</label>
+                        <input type="text" class="form-control" id="editName" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editSurname" class="form-label">Soyad</label>
+                        <input type="text" class="form-control" id="editSurname" name="Surname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editStartingJob" class="form-label">İşe Başlama Tarihi</label>
+                        <input type="date" class="form-control" id="editStartingJob" name="startingJob" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTelegramId" class="form-label">Telegram ID</label>
+                        <input type="text" class="form-control" id="editTelegramId" name="telegramId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editPhone" class="form-label">Telefon</label>
+                        <input type="text" class="form-control" id="editPhone" name="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editCategory" class="form-label">Çalışan Kategorisi</label>
+                        <select class="form-select" id="editCategory" name="category" aria-label="çalışan kategorisi">
+                            <option selected>Çalışan kategorisini seçiniz</option>
+                            <option value="1">Yöneticiler</option>
+                            <option value="2">Stajyerler</option>
+                            <option value="3">Takım Liderleri</option>
+                            <option value="4">Yazılım Ekibi</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editEmail" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="editEmail" name="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--User-Member karşılaştır-->
+
+<div class="modal fade" id="confirmUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  " role="document">
+        <div class="modal-content col-6">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Çalışan Hesabı Ekle</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-regular fa-circle-xmark fa-xl" style="color: white;"></i>
+                </button>
+            </div>
+
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link " id="project-add-users-tab" data-bs-toggle="tab" href="#project-users-members" role="tab" aria-controls="project-users-members" aria-selected="true">İlişkili Kullanıcı</a>
+                </li>
+            </ul>
+
+            <form id="confirmUserForm">
+                <div class="modal-body">
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="project-add-users" role="tabpanel">
+                            <div class="form-users">
+                                <div id="userList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" id="setUserIdButton" class="btn btn-primary">Şirkete Kaydet</button>
+                </div>
+
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
